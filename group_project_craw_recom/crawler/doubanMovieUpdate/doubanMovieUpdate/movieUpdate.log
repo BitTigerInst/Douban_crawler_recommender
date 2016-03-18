@@ -1,0 +1,1026 @@
+2016-03-16 15:02:15 [scrapy] INFO: Scrapy 1.0.5 started (bot: doubanMovieUpdate)
+2016-03-16 15:02:15 [scrapy] INFO: Optional features available: ssl, http11, boto
+2016-03-16 15:02:15 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'doubanMovieUpdate.spiders', 'SPIDER_MODULES': ['doubanMovieUpdate.spiders'], 'LOG_LEVEL': 'INFO', 'DOWNLOAD_DELAY': 5, 'BOT_NAME': 'doubanMovieUpdate'}
+2016-03-16 15:02:15 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, LogStats, CoreStats, SpiderState
+2016-03-16 15:02:15 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-03-16 15:02:15 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-03-16 15:02:15 [scrapy] INFO: Enabled item pipelines: DoubanmovieupdatePipeline
+2016-03-16 15:02:15 [scrapy] INFO: Spider opened
+2016-03-16 15:02:15 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-03-16 15:02:30 [botocore.credentials] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+2016-03-16 15:02:30 [scrapy] ERROR: Error processing {'actor': [u'\u91d1\u59ae\u5f17\xb7\u53e4\u5fb7\u6e29',
+           u'\u6770\u68ee\xb7\u8d1d\u7279\u66fc',
+           u'\u4f0a\u5fb7\u91cc\u65af\xb7\u827e\u5c14\u5df4',
+           u'\u73cd\u59ae\xb7\u65af\u857e\u7279',
+           u'\u5185\u7279\xb7\u6258\u4f26\u65af',
+           u'\u90a6\u5c3c\xb7\u4ea8\u7279',
+           u'\u5510\xb7\u96f7\u514b',
+           u'\u6c64\u7c73\xb7\u949f',
+           u'J\xb7K\xb7\u897f\u8499\u65af',
+           u'\u5965\u514b\u5854\u7ef4\u4e9a\xb7\u65af\u5bbe\u745f',
+           u'\u827e\u4f26\xb7\u56fe\u4ee3\u514b',
+           u'\u590f\u5947\u62c9',
+           u'\u96f7\u8499\u5fb7\xb7S\xb7\u4f69\u5c14\u897f',
+           u'\u5fb7\u62c9\xb7\u8428\u5df4',
+           u'\u83ab\u91cc\u65af\xb7\u62c9\u9a6c\u5947',
+           u'\u83f2\u5c14\xb7\u7ea6\u7ff0\u65af\u987f'],
+ 'classification': [u'\u559c\u5267',
+                    u'\u52a8\u4f5c',
+                    u'\u52a8\u753b',
+                    u'\u5192\u9669'],
+ 'cover': u'https://movie.douban.com/subject/25662329/photos?type=R',
+ 'director': [u'\u62dc\u4f26\xb7\u970d\u534e\u5fb7',
+              u'\u745e\u5947\xb7\u6469\u5c14',
+              u'\u6770\u62c9\u5fb7\xb7\u5e03\u4ec0'],
+ 'movieid': '25662329',
+ 'name': [u'\u75af\u72c2\u52a8\u7269\u57ce Zootopia'],
+ 'score': [u'9.4'],
+ 'url': 'http://movie.douban.com/subject/25662329/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-4: ordinal not in range(128)
+2016-03-16 15:02:39 [scrapy] ERROR: Error processing {'actor': [u'\u8c22\u5bb9\u513f',
+           u'Mik Thongraya',
+           u'\u6768\u674f',
+           u'\u6e38\u4e50\u513f',
+           u'\u674e\u840c\u840c',
+           u'\u5468\u4e9a\u5e73',
+           u'\u96c1\u5b50',
+           u'\u90ed\u4e2d\u53cb',
+           u'\u6768\u6893\u9091',
+           u'\u5f6d\u827a\u535a',
+           u'\u5e38\u7b11\u7b11',
+           u'\u5f90\u73ba\u6db5',
+           u'\u4e8e\u96f7',
+           u'\u5218\u5b9d\u4e50',
+           u'\u4efb\u5a07',
+           u'\u6c5f\u6d69\u6850',
+           u'\u8f66\u9759\u5b50',
+           u'\u5b59\u66fc\u9f84'],
+ 'classification': [u'\u60ca\u609a', u'\u6050\u6016'],
+ 'cover': u'https://movie.douban.com/subject/26370966/photos?type=R',
+ 'director': [u'\u5f20\u6d0b'],
+ 'movieid': '26370966',
+ 'name': [u'\u6050\u6016\u5c06\u6620'],
+ 'score': [],
+ 'url': 'http://movie.douban.com/subject/26370966/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:02:39 [scrapy] ERROR: Error processing {'actor': [u'\u5927\u5175',
+           u'\u767d\u6ce2',
+           u'\u9ec4\u79d1\u6e90',
+           u'\u5434\u743c',
+           u'\u5415\u6653\u79be'],
+ 'classification': [u'\u559c\u5267'],
+ 'cover': u'https://movie.douban.com/subject/26595397/photos?type=R',
+ 'director': [u'\u90ed\u5cf0'],
+ 'movieid': '26595397',
+ 'name': [u'\u56de\u4e61\u9017\u513f'],
+ 'score': [],
+ 'url': 'http://movie.douban.com/subject/26595397/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:02:47 [scrapy] ERROR: Error processing {'actor': [u'\u9ec4\u707f\u707f',
+           u'\u6556\u72ac',
+           u'\u5357\u7b19',
+           u'\u738b\u5b50\u8c6a',
+           u'\u738b\u5b50\u6770',
+           u'\u9ec4\u8bd7\u68cb',
+           u'\u6c5f\u5029\u9f84',
+           u'\u53ef\u6674',
+           u'\u5f2f\u5f2f'],
+ 'classification': [u'\u5267\u60c5'],
+ 'cover': u'https://movie.douban.com/subject/26345159/photos?type=R',
+ 'director': [u'\u963f\u725b', u'\u8d75\u5b87', u'\u9648\u7acb\u8c26'],
+ 'movieid': '26345159',
+ 'name': [u'\u534a\u719f\u5c11\u5973'],
+ 'score': [u'5.0'],
+ 'url': 'http://movie.douban.com/subject/26345159/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:02:53 [scrapy] ERROR: Error processing {'actor': [u'\u5f20\u5929\u9633',
+           u'\u4f55\u6cd3\u59d7',
+           u'\u4e07\u4ed3',
+           u'\u91d1\u4eae',
+           u'\u4e8e\u5fb7\u6c5f',
+           u'\u5180\u4e66\u4ea5'],
+ 'classification': [u'\u52a8\u4f5c', u'\u7231\u60c5', u'\u6b66\u4fa0'],
+ 'cover': u'https://movie.douban.com/subject/25924268/photos?type=R',
+ 'director': [u'\u7af9\u537f'],
+ 'movieid': '25924268',
+ 'name': [u'\u559c\u4e50\u957f\u5b89'],
+ 'score': [],
+ 'url': 'http://movie.douban.com/subject/25924268/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:02:56 [scrapy] ERROR: Error processing {'actor': [u'\u5f20\u56fd\u8363',
+           u'\u5f20\u66fc\u7389',
+           u'\u6885\u8273\u82b3',
+           u'\u9648\u53cb',
+           u'\u6c64\u9547\u5b97',
+           u'\u5f20\u575a\u5ead'],
+ 'classification': [u'\u5267\u60c5', u'\u559c\u5267', u'\u7231\u60c5'],
+ 'cover': u'https://movie.douban.com/subject/1304961/photos?type=R',
+ 'director': [u'\u9ec4\u6cf0\u6765'],
+ 'movieid': '1304961',
+ 'name': [u'\u7f18\u4efd \u7de3\u4efd'],
+ 'score': [u'7.0'],
+ 'url': 'http://movie.douban.com/subject/1304961/',
+ 'year': [u'1984']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)
+2016-03-16 15:03:05 [scrapy] ERROR: Error processing {'actor': [u'\u4ea8\u5229\xb7\u5361\u7ef4\u5c14',
+           u'\u672c\xb7\u963f\u5f17\u83b1\u514b',
+           u'\u827e\u7c73\xb7\u4e9a\u5f53\u65af',
+           u'\u76d6\u5c14\xb7\u52a0\u6735',
+           u'\u6234\u5b89\xb7\u7433\u6069',
+           u'\u6770\u897f\xb7\u827e\u68ee\u4f2f\u683c',
+           u'\u6770\u745e\u7c73\xb7\u827e\u6069\u65af',
+           u'\u970d\u5229\xb7\u4ea8\u7279',
+           u'\u52b3\u4f26\u65af\xb7\u83f2\u4ec0\u4f2f\u6069',
+           u'\u5361\u5170\xb7\u9a6c\u5c14\u97e6',
+           u'\u5188\u672c\u591a\u7eea',
+           u'\u65af\u79d1\u7279\xb7\u9ea6\u514b\u7eb3\u91cc',
+           u'\u5409\u5a1c\xb7\u9a6c\u9686',
+           u'\u6770\u5f17\u91cc\xb7\u8fea\u6069\xb7\u6469\u6839',
+           u'\u52b3\u4f26\xb7\u79d1\u6c49'],
+ 'classification': [u'\u52a8\u4f5c',
+                    u'\u79d1\u5e7b',
+                    u'\u5947\u5e7b',
+                    u'\u5192\u9669'],
+ 'cover': u'https://movie.douban.com/subject/24750534/photos?type=R',
+ 'director': [u'\u624e\u514b\xb7\u65bd\u5948\u5fb7'],
+ 'movieid': '24750534',
+ 'name': [u'\u8759\u8760\u4fa0\u5927\u6218\u8d85\u4eba\uff1a\u6b63\u4e49\u9ece\u660e Batman v Superman: Dawn of Justice'],
+ 'score': [],
+ 'url': 'http://movie.douban.com/subject/24750534/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-11: ordinal not in range(128)
+2016-03-16 15:03:06 [scrapy] ERROR: Error processing {'actor': [u'\u590f\u96e8',
+           u'\u5b8b\u7956\u513f',
+           u'\u6768\u7d2b',
+           u'\u5434\u5927\u7ef4',
+           u'\u6c5f\u73ca',
+           u'\u80e1\u5175',
+           u'\u968b\u51ef',
+           u'\u5317\u7f8e\u5d14\u54e5',
+           u'\u739b\u897f\xb7\u683c\u96f7',
+           u'\u4e39\u5c3c\u65af\xb7\u5434',
+           u'\u8d75\u831c',
+           u'\u827e\u7c73\u8389\xb7\u91d1\u59ae',
+           u'Jake Elliott',
+           u'Anjini Azhar',
+           u'Chloe Perrin',
+           u'\u6234\u6fb4\u96e8',
+           u'Claire Jacobs'],
+ 'classification': [u'\u559c\u5267', u'\u5bb6\u5ead'],
+ 'cover': u'https://movie.douban.com/subject/26729533/photos?type=R',
+ 'director': [u'\u90d1\u6f47'],
+ 'movieid': '26729533',
+ 'name': [u'\u6d1b\u6749\u77f6\u6363\u86cb\u8ba1\u5212'],
+ 'score': [],
+ 'url': 'http://movie.douban.com/subject/26729533/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-6: ordinal not in range(128)
+2016-03-16 15:03:15 [scrapy] INFO: Crawled 9 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2016-03-16 15:03:16 [scrapy] ERROR: Error processing {'actor': [u'\u9ec4\u53c8\u5357',
+           u'\u5434\u5343\u8bed',
+           u'\u5218\u7f8e\u541b',
+           u'\u6881\u548f\u742a',
+           u'\u674e\u514b\u52e4',
+           u'\u7fdf\u51ef\u6cf0',
+           u'\u5c39\u626c\u660e',
+           u'\u5355\u7acb\u6587',
+           u'\u767d\u5f6a',
+           u'\u76db\u541b',
+           u'\u8c2d\u8000\u6587'],
+ 'classification': [u'\u5267\u60c5', u'\u7231\u60c5'],
+ 'cover': u'https://movie.douban.com/subject/25951720/photos?type=R',
+ 'director': [u'\u5218\u4f1f\u6052'],
+ 'movieid': '25951720',
+ 'name': [u'\u5bfb\u627e\u5fc3\u4e2d\u7684\u4f60 \u738b\u5bb6\u6b23'],
+ 'score': [u'7.4'],
+ 'url': 'http://movie.douban.com/subject/25951720/',
+ 'year': [u'2015']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-5: ordinal not in range(128)
+2016-03-16 15:03:22 [scrapy] ERROR: Error processing {'actor': [u'\u674e\u6292\u822a', u'\u7a0b\u5a9b\u5a9b', u'\u5b54\u7ef4'],
+ 'classification': [u'\u60ca\u609a', u'\u6050\u6016'],
+ 'cover': u'https://movie.douban.com/subject/26680909/photos?type=R',
+ 'director': [u'\u848b\u56fd\u6743'],
+ 'movieid': '26680909',
+ 'name': [u'\u8be1\u5a03'],
+ 'score': [u'2.5'],
+ 'url': 'http://movie.douban.com/subject/26680909/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)
+2016-03-16 15:03:26 [scrapy] ERROR: Error processing {'actor': [u'\u9b4f\u83b2\u5cf0',
+           u'\u5929\u60a6',
+           u'\u621a\u4e5d\u6d32',
+           u'\u9ad8\u5ddd',
+           u'\u5f20\u4eac\u751f'],
+ 'classification': [u'\u7231\u60c5'],
+ 'cover': u'https://movie.douban.com/subject/26728083/photos?type=R',
+ 'director': [u'\u9648\u96e8\u7530'],
+ 'movieid': '26728083',
+ 'name': [u'\u4f60\u662f\u4e0d\u662f\u6211\u7684\u7231\u4eba'],
+ 'score': [u'2.9'],
+ 'url': 'http://movie.douban.com/subject/26728083/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-7: ordinal not in range(128)
+2016-03-16 15:03:30 [scrapy] ERROR: Error processing {'actor': [u'\u5348\u9a6c',
+           u'\u5b59\u6842\u7530',
+           u'\u8c22\u5b5f\u4f1f',
+           u'\u718a\u73c2',
+           u'\u5e38\u82e5\u7199',
+           u'\u9648\u4f73\u9633',
+           u'\u90ed\u5c55\u6708',
+           u'Lala',
+           u'\u845b\u8d77\u8c6a',
+           u'\u90ed\u5b50\u6e90'],
+ 'classification': [u'\u5267\u60c5'],
+ 'cover': u'https://movie.douban.com/subject/26700894/photos?type=R',
+ 'director': [u'\u6768\u6613\u4e4b'],
+ 'movieid': '26700894',
+ 'name': [u'\u54d1\u5b69\u513f'],
+ 'score': [],
+ 'url': 'http://movie.douban.com/subject/26700894/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-2: ordinal not in range(128)
+2016-03-16 15:03:37 [scrapy] ERROR: Error processing {'actor': [u'\u5f6d\u6ce2',
+           u'\u674e\u6dfb\u8bfa',
+           u'\u8463\u5411\u8363',
+           u'\u97e9\u4e30',
+           u'\u8463\u6021\u541b'],
+ 'classification': [u'\u559c\u5267', u'\u52a8\u4f5c', u'\u53e4\u88c5'],
+ 'cover': u'https://movie.douban.com/subject/26728186/photos?type=R',
+ 'director': [u'\u96f7\u91d1\u514b'],
+ 'movieid': '26728186',
+ 'name': [u'\u7b28\u8d3c\u522b\u8dd1'],
+ 'score': [],
+ 'url': 'http://movie.douban.com/subject/26728186/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:03:46 [scrapy] ERROR: Error processing {'actor': [u'\u7504\u5b50\u4e39',
+           u'\u6768\u7d2b\u743c',
+           u'\u5c91\u52c7\u5eb7',
+           u'\u5218\u627f\u7fbd',
+           u'\u674e\u622a',
+           u'\u539f\u4e3d\u6dc7',
+           u'\u5434\u9752\u82b8',
+           u'\u8881\u4e4b\u6b63',
+           u'\u9648\u94b0\u82b8',
+           u'\u5434\u80b2\u521a',
+           u'\u6734\u4e91\u9f99',
+           u'\u5173\u6c38\u626c',
+           u'\u514b\u91cc\u65af\xb7\u5f6d',
+           u'\u5f20\u8212\u96c5',
+           u'\u5468\u5c0f\u98de'],
+ 'classification': [u'\u5267\u60c5',
+                    u'\u52a8\u4f5c',
+                    u'\u6b66\u4fa0',
+                    u'\u53e4\u88c5'],
+ 'cover': u'https://movie.douban.com/subject/21327512/photos?type=R',
+ 'director': [u'\u8881\u548c\u5e73'],
+ 'movieid': '21327512',
+ 'name': [u'\u5367\u864e\u85cf\u9f99\uff1a\u9752\u51a5\u5b9d\u5251 Crouching Tiger, Hidden Dragon: Sword of Destiny'],
+ 'score': [u'4.9'],
+ 'url': 'http://movie.douban.com/subject/21327512/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-8: ordinal not in range(128)
+2016-03-16 15:03:53 [scrapy] ERROR: Error processing {'actor': [u'\u77f3\u5ddd\u754c\u4eba',
+           u'\u8d64\u7fbd\u6839\u5065\u6cbb',
+           u'\u5c0f\u91ce\u8d24\u7ae0',
+           u'\u5188\u672c\u4fe1\u5f66',
+           u'\u91ce\u5c9b\u5065\u513f',
+           u'\u5c0f\u5c71\u529b\u4e5f',
+           u'\u5ddd\u7530\u7ec5\u53f8',
+           u'\u771f\u6bbf\u5149\u662d',
+           u'\u6d6a\u5ddd\u5927\u8f85',
+           u'\u5e73\u7530\u5e7f\u660e',
+           u'\u5bab\u672c\u5145',
+           u'\u6d45\u91ce\u771f\u6f84',
+           u'\u6850\u672c\u7422\u4e5f',
+           u'\u68ee\u5ddd\u667a\u4e4b'],
+ 'classification': [u'\u52a8\u753b'],
+ 'cover': u'https://movie.douban.com/subject/10480973/photos?type=R',
+ 'director': [u'\u4f50\u85e4\u656c\u4e00'],
+ 'movieid': '10480973',
+ 'name': [u'\u5723\u6597\u58eb\u661f\u77e2 \u8056\u95d8\u58eb\u661f\u77e2 Legend of Sanctuary'],
+ 'score': [u'6.4'],
+ 'url': 'http://movie.douban.com/subject/10480973/',
+ 'year': [u'2014']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-4: ordinal not in range(128)
+2016-03-16 15:03:59 [scrapy] ERROR: Error processing {'actor': [u'\u5468\u6da6\u53d1',
+           u'\u5218\u5fb7\u534e',
+           u'\u5f20\u5bb6\u8f89',
+           u'\u5f20\u5b66\u53cb',
+           u'\u4f59\u6587\u4e50',
+           u'\u674e\u5b87\u6625',
+           u'\u5218\u5609\u73b2',
+           u'\u738b\u8bd7\u9f84',
+           u'\u5411\u4f50',
+           u'\u80e1\u7136',
+           u'\u6587\u548f\u73ca',
+           u'\u5143\u79cb',
+           u'\u6734\u8f7d\u76f8',
+           u'\u7ae5\u83f2',
+           u'\u7f57\u5bb6\u82f1',
+           u'\u5362\u6d77\u9e4f'],
+ 'classification': [u'\u559c\u5267', u'\u52a8\u4f5c'],
+ 'cover': u'https://movie.douban.com/subject/26334559/photos?type=R',
+ 'director': [u'\u5218\u4f1f\u5f3a', u'\u738b\u6676'],
+ 'movieid': '26334559',
+ 'name': [u'\u6fb3\u95e8\u98ce\u4e913 \u8ced\u57ce\u98a8\u96f2III'],
+ 'score': [u'4.0'],
+ 'url': 'http://movie.douban.com/subject/26334559/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:04:05 [scrapy] ERROR: Error processing {'actor': [u'\u5c3c\u53e4\u62c9\u65af\xb7\u51ef\u5947',
+           u'\u67e5\u5fb7\xb7\u8fc8\u514b\u5c14\xb7\u58a8\u745e',
+           u'\u5361\u897f\xb7\u6c64\u666e\u68ee',
+           u'\u59ae\u57fa\xb7\u97e6\u5170',
+           u'\u4e54\u4e01\xb7\u65af\u5df4\u514b\u65af',
+           u'\u8389\xb7\u6c64\u666e\u68ee',
+           u'\u6606\u4e1c\xb7\u4e9a\u4f26',
+           u'\u9a6c\u4e01\xb7\u79d1\u52d2\u5df4',
+           u'\u52b3\u62c9\xb7\u51ef\u6d1b\u8482',
+           u'\u5a01\u5ec9\xb7\u7f57\u683c\u65af\u6234\u5c14'],
+ 'classification': [u'\u52a8\u4f5c', u'\u79d1\u5e7b', u'\u60ca\u609a'],
+ 'cover': u'https://movie.douban.com/subject/21324299/photos?type=R',
+ 'director': [u'\u7ef4\u514b\xb7\u963f\u59c6\u65af\u7279\u6717'],
+ 'movieid': '21324299',
+ 'name': [u'\u672b\u65e5\u8ff7\u8e2a Left Behind'],
+ 'score': [u'4.0'],
+ 'url': 'http://movie.douban.com/subject/21324299/',
+ 'year': [u'2014']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:04:10 [scrapy] ERROR: Error processing {'actor': [u'\u57c3\u8fea\xb7\u96f7\u5fb7\u6885\u6069',
+           u'\u6770\u7c73\xb7\u574e\u8d1d\u5c14\xb7\u9c8d\u5c14',
+           u'\u7ea6\u7ff0\xb7\u8d6b\u7279',
+           u'\u5965\u5229\u7ef4\u5a05\xb7\u79d1\u5c14\u66fc',
+           u'\u5a01\u5ec9\xb7\u970d\u666e',
+           u'\u7ea6\u745f\u592b\xb7\u6885',
+           u'\u5927\u536b\xb7\u62dc\u5fb7\u62c9',
+           u'\u51ef\u745e\xb7\u838e\u52d2',
+           u'\u53f2\u8482\u6587\xb7\u51ef\u66fc',
+           u'\u57fa\u601d\xb7\u5a01\u514b\u59c6',
+           u'\u7ea6\u7ff0\xb7\u54c8\u65af\u52d2',
+           u'\u9a6c\u514b\xb7\u83ab\u62c9\u6839',
+           u'\u6cf0\u8389\u838e\xb7\u52a0\u62c9\u8d6b',
+           u'\u6731\u5c14\u65af\xb7\u5fb7\xb7\u5bb9',
+           u'\u5927\u536b\xb7\u9ea6\u91d1'],
+ 'classification': [u'\u52a8\u753b', u'\u5bb6\u5ead', u'\u513f\u7ae5'],
+ 'cover': u'https://movie.douban.com/subject/26356538/photos?type=R',
+ 'director': [u'\u5927\u536b\xb7\u65af\u7279\u767b'],
+ 'movieid': '26356538',
+ 'name': [u"\u6258\u9a6c\u65af\u548c\u670b\u53cb\u4eec\uff1a\u591a\u591a\u5c9b\u4e4b\u8ff7\u5931\u5b9d\u85cf Thomas & Friends: Sodor's Legend of the Lost Treasure"],
+ 'score': [u'6.4'],
+ 'url': 'http://movie.douban.com/subject/26356538/',
+ 'year': [u'2015']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-15: ordinal not in range(128)
+2016-03-16 15:04:15 [scrapy] INFO: Crawled 19 pages (at 10 pages/min), scraped 0 items (at 0 items/min)
+2016-03-16 15:04:20 [scrapy] ERROR: Error processing {'actor': [u'\u6c64\u552f',
+           u'\u5434\u79c0\u6ce2',
+           u'\u6d77\u6e05',
+           u'\u5b8b\u7f8e\u66fc',
+           u'\u5b8b\u7f8e\u6167',
+           u'\u91d1\u71d5\u73b2',
+           u'\u4e70\u7ea2\u59b9',
+           u'\u5e03\u62c9\u5fb7\xb7\u54c8\u5fb7',
+           u'\u674e\u7eee\u8679'],
+ 'classification': [u'\u559c\u5267', u'\u7231\u60c5'],
+ 'cover': u'https://movie.douban.com/subject/10574468/photos?type=R',
+ 'director': [u'\u859b\u6653\u8def'],
+ 'movieid': '10574468',
+ 'name': [u'\u5317\u4eac\u9047\u4e0a\u897f\u96c5\u56fe'],
+ 'score': [u'7.4'],
+ 'url': 'http://movie.douban.com/subject/10574468/',
+ 'year': [u'2013']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-6: ordinal not in range(128)
+2016-03-16 15:04:29 [scrapy] ERROR: Error processing {'actor': [u'\u6768\u5343\u5b05',
+           u'\u6797\u6d77\u5cf0',
+           u'\u82cf\u4e3d\u73ca',
+           u'\u6e38\u5b66\u4fee',
+           u'\u5434\u8087\u8f69',
+           u'\u8d75\u5b66\u800c',
+           u'\u4e54\u5b9d\u5b9d',
+           u'\u949f\u4e3d\u6dc7',
+           u'\u6768\u8bd7\u654f',
+           u'\u8c2d\u7389\u745b',
+           u'\u8521\u701a\u4ebf',
+           u'\u6797\u5b50\u806a',
+           u'\u9676\u6770',
+           u'\u4f55\u6545',
+           u'\u674e\u654f'],
+ 'classification': [u'\u5267\u60c5', u'\u7231\u60c5'],
+ 'cover': u'https://movie.douban.com/subject/25852263/photos?type=R',
+ 'director': [u'\u9ec4\u4fee\u5e73'],
+ 'movieid': '25852263',
+ 'name': [u'\u54ea\u4e00\u5929\u6211\u4eec\u4f1a\u98de \u54ea\u4e00\u5929\u6211\u5011\u6703\u98db'],
+ 'score': [u'7.2'],
+ 'url': 'http://movie.douban.com/subject/25852263/',
+ 'year': [u'2015']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-6: ordinal not in range(128)
+2016-03-16 15:04:34 [scrapy] ERROR: Error processing {'actor': [u'\u4e09\u74f6\u7531\u5e03\u5b50',
+           u'\u83ca\u6c60\u5fc3',
+           u'\u7af9\u5185\u987a\u5b50',
+           u'\u6749\u5c71\u7eaa\u5f70',
+           u'\u963f\u90e8\u6566',
+           u'\u5c0f\u91ce\u8d24\u7ae0',
+           u'\u6728\u5c9b\u9686\u4e00',
+           u'\u65e9\u89c1\u6c99\u7ec7',
+           u'\u6d6a\u5ddd\u5927\u8f85'],
+ 'classification': [u'\u52a8\u4f5c', u'\u52a8\u753b', u'\u5192\u9669'],
+ 'cover': u'https://movie.douban.com/subject/26282448/photos?type=R',
+ 'director': [u'\u5c71\u4e0b\u5b8f\u5e78'],
+ 'movieid': '26282448',
+ 'name': [u'\u706b\u5f71\u5fcd\u8005\u5267\u573a\u7248\uff1a\u535a\u4eba\u4f20 BORUTO -NARUTO THE MOVIE-'],
+ 'score': [u'8.5'],
+ 'url': 'http://movie.douban.com/subject/26282448/',
+ 'year': [u'2015']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-10: ordinal not in range(128)
+2016-03-16 15:04:41 [scrapy] ERROR: Error processing {'actor': [u'\u90ed\u5bcc\u57ce',
+           u'\u5de9\u4fd0',
+           u'\u51af\u7ecd\u5cf0',
+           u'\u5c0f\u6c88\u9633',
+           u'\u7f57\u4ef2\u8c26',
+           u'\u8d39\u7fd4',
+           u'\u9648\u6167\u7433',
+           u'\u963f\u65fa\u4ec1\u9752',
+           u'\u5f6d\u5b87',
+           u'\u7a0b\u4e1c',
+           u'\u5218\u695a\u606c',
+           u'\u4f59\u8f9b',
+           u'\u9b4f\u7490',
+           u'\u9f50\u6d60\u513f',
+           u'\u6bcd\u5176\u5f25\u96c5',
+           u'\u5f20\u7c7d\u6c90'],
+ 'classification': [u'\u559c\u5267', u'\u52a8\u4f5c', u'\u5947\u5e7b'],
+ 'cover': u'https://movie.douban.com/subject/25827963/photos?type=R',
+ 'director': [u'\u90d1\u4fdd\u745e'],
+ 'movieid': '25827963',
+ 'name': [u'\u897f\u6e38\u8bb0\u4e4b\u5b59\u609f\u7a7a\u4e09\u6253\u767d\u9aa8\u7cbe'],
+ 'score': [u'5.9'],
+ 'url': 'http://movie.douban.com/subject/25827963/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-11: ordinal not in range(128)
+2016-03-16 15:04:45 [scrapy] ERROR: Error processing {'actor': [u'\u59dc\u6f6e',
+           u'\u5468\u97e6\u5f64',
+           u'\u674e\u68a6',
+           u'\u4e8e\u6726\u80e7',
+           u'\u674e\u6f2b\u837b',
+           u'\u5f20\u78ca',
+           u'\u9f50\u70ab\u5b87',
+           u'\u9ed1\u6208'],
+ 'classification': [u'\u559c\u5267', u'\u7231\u60c5'],
+ 'cover': u'https://movie.douban.com/subject/26686166/photos?type=R',
+ 'director': [u'\u7a0b\u4e2d\u8c6a', u'\u738b\u51ef'],
+ 'movieid': '26686166',
+ 'name': [u'\u540c\u57ce\u9082\u9005'],
+ 'score': [u'3.6'],
+ 'url': 'http://movie.douban.com/subject/26686166/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:04:54 [scrapy] ERROR: Error processing {'actor': [u'\u6770\u514b\xb7\u5e03\u83b1\u514b',
+           u'\u5b89\u5409\u4e3d\u5a1c\xb7\u6731\u8389',
+           u'\u8fbe\u65af\u6c40\xb7\u970d\u592b\u66fc',
+           u'\u6210\u9f99',
+           u'\u585e\u65af\xb7\u7f57\u6839',
+           u'\u5218\u7389\u73b2',
+           u'\u5927\u536b\xb7\u514b\u7f57\u65af',
+           u'\u8a79\u59c6\u65af\xb7\u6d2a',
+           u'\u5e03\u83b1\u6069\xb7\u79d1\u5170\u65af\u987f',
+           u'\u51ef\u7279\xb7\u54c8\u5fb7\u68ee',
+           u'J\xb7K\xb7\u897f\u8499\u65af',
+           u'\u5170\u5fb7\u5c14\xb7\u675c\u514b\xb7\u91d1'],
+ 'classification': [u'\u559c\u5267',
+                    u'\u52a8\u4f5c',
+                    u'\u52a8\u753b',
+                    u'\u5192\u9669'],
+ 'cover': u'https://movie.douban.com/subject/11589036/photos?type=R',
+ 'director': [u'\u5415\u5bc5\u8363',
+              u'\u4e9a\u5386\u5c71\u5fb7\u7f57\xb7\u5361\u7f57\u5c3c'],
+ 'movieid': '11589036',
+ 'name': [u'\u529f\u592b\u718a\u732b3 Kung Fu Panda 3'],
+ 'score': [u'7.9'],
+ 'url': 'http://movie.douban.com/subject/11589036/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:05:02 [scrapy] ERROR: Error processing {'actor': [u'\u4f55\u6da6\u4e1c',
+           u'\u79e6\u660a',
+           u'\u5468\u4e00\u56f4',
+           u'\u5f20\u6893\u7433',
+           u'\u7530\u539f',
+           u'\u9ec4\u707f\u707f',
+           u'\u5f20\u6b46\u827a',
+           u'\u6d77\u4e00\u5929',
+           u'\u5b89\u4ee5\u8f69',
+           u'\u91d1\u5fd7\u6587',
+           u'\u9ad8\u6377',
+           u'\u5218\u5ffb',
+           u'\u674e\u70ab\u81fb'],
+ 'classification': [u'\u7231\u60c5'],
+ 'cover': u'https://movie.douban.com/subject/25907086/photos?type=R',
+ 'director': [u'\u8096\u98de', u'\u5f81\u957f\u5f20'],
+ 'movieid': '25907086',
+ 'name': [u'\u7231\u60c5\u9ebb\u8fa3\u70eb\u4e4b\u60c5\u5b9a\u7ec8\u8eab'],
+ 'score': [u'4.3'],
+ 'url': 'http://movie.douban.com/subject/25907086/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-9: ordinal not in range(128)
+2016-03-16 15:05:09 [scrapy] ERROR: Error processing {'actor': [u'\u738b\u5927\u6cbb',
+           u'\u90ed\u91d1\u6770',
+           u'\u845b\u6653\u51e4',
+           u'\u82cf\u4e3d',
+           u'\u7f57\u4eac\u6c11',
+           u'\u5f90\u7bad',
+           u'\u6797\u6c38\u5065',
+           u'\u5218\u6c5f ',
+           u'\u5fb7\u6c5f'],
+ 'classification': [u'\u559c\u5267', u'\u6218\u4e89'],
+ 'cover': u'https://movie.douban.com/subject/25757187/photos?type=R',
+ 'director': [u'\u8d75\u5c0f\u6eaa'],
+ 'movieid': '25757187',
+ 'name': [u'\u6211\u4e0d\u662f\u738b\u6bdb'],
+ 'score': [u'7.4'],
+ 'url': 'http://movie.douban.com/subject/25757187/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-4: ordinal not in range(128)
+2016-03-16 15:05:13 [scrapy] ERROR: Error processing {'actor': [u'\u6bb7\u679c\u513f',
+           u'\u59dc\u6587\u8f69',
+           u'\u82d7\u9752',
+           u'\u5218\u529b\u6e90',
+           u'\u5b8b\u4f1f'],
+ 'classification': [u'\u60ca\u609a', u'\u6050\u6016'],
+ 'cover': u'https://movie.douban.com/subject/26694681/photos?type=R',
+ 'director': [u'\u5c1a\u6c38\u5cf0'],
+ 'movieid': '26694681',
+ 'name': [u'\u5e8a\u4e0b\u6709\u4eba3'],
+ 'score': [u'2.8'],
+ 'url': 'http://movie.douban.com/subject/26694681/',
+ 'year': [u'2015']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:05:15 [scrapy] INFO: Crawled 28 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2016-03-16 15:05:24 [scrapy] ERROR: Error processing {'actor': [u'\u5b89\u4e1c\u5c3c\u5965\xb7\u73ed\u5fb7\u62c9\u65af',
+           u'\u6731\u4e3d\u53f6\xb7\u6bd4\u8bfa\u4ec0',
+           u'\u7f57\u5fb7\u91cc\u683c\xb7\u6851\u6258\u7f57',
+           u'\u5a1c\u5965\u7c73\xb7\u65af\u79d1\u7279',
+           u'\u853b\u7279\xb7\u5fb7\xb7\u5e15\u5e03\u7f57',
+           u'\u5362\xb7\u6234\u8499\u5fb7\xb7\u83f2\u5229\u666e\u65af',
+           u'\u8a79\u59c6\u65af\xb7\u5e03\u6d1b\u6797',
+           u'\u52a0\u5e03\u91cc\u57c3\u5c14\xb7\u4f2f\u6069',
+           u'\u9c8d\u52c3\xb7\u5188\u987f',
+           u'\u51ef\u7279\xb7\u5fb7\u5c14\xb7\u5361\u65af\u8482\u6d1b',
+           u'\u8d3e\u514b\u6ce2\xb7\u74e6\u683c\u65af',
+           u'\u9a6c\u91cc\u5965\xb7\u5361\u8428\u65af',
+           u'\u827e\u5fb7\u91cc\u5b89\u5a1c\xb7\u5df4\u62c9\u624e',
+           u'\u5965\u65af\u5361\xb7\u52aa\u5185\u65af',
+           u'\u8c6a\u5c14\u8d6b\xb7\u8fea\u4e9a\u65af',
+           u'\u7279\u8bfa\u5207\xb7\u97e6\u5c14\u5854',
+           u'\u5b9d\u7433\u5a1c\xb7\u52a0\u897f\u4e9a',
+           u'\u8d39\u5fb7\u91cc\u79d1\xb7\u8def\u76ae',
+           u'\u80e1\u5b89\xb7\u5e15\u7f57\xb7\u672d\u96f7\u7c73\u62c9 '],
+ 'classification': [u'\u5267\u60c5', u'\u4f20\u8bb0', u'\u5386\u53f2'],
+ 'cover': u'https://movie.douban.com/subject/10568385/photos?type=R',
+ 'director': [u'\u6d3e\u7fe0\u897f\u4e9a\xb7\u91cc\u6839'],
+ 'movieid': '10568385',
+ 'name': [u'\u5730\u5fc3\u8425\u6551 The 33'],
+ 'score': [u'7.3'],
+ 'url': 'http://movie.douban.com/subject/10568385/',
+ 'year': [u'2015']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:05:35 [scrapy] ERROR: Error processing {'actor': [u'\u5b8b\u6d0b',
+           u'\u4e8e\u627f\u60e0',
+           u'\u674e\u5448\u5a9b',
+           u'\u738b\u71d5\u59ae',
+           u'\u8d75\u5ce5',
+           u'\u674e\u957f\u9e9f',
+           u'\u9a6c\u541b'],
+ 'classification': [u'\u5267\u60c5', u'\u6b66\u4fa0', u'\u53e4\u88c5'],
+ 'cover': u'https://movie.douban.com/subject/7564989/photos?type=R',
+ 'director': [u'\u5f90\u7693\u5cf0'],
+ 'movieid': '7564989',
+ 'name': [u'\u7bad\u58eb\u67f3\u767d\u733f'],
+ 'score': [u'7.5'],
+ 'url': 'http://movie.douban.com/subject/7564989/',
+ 'year': [u'2012']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-4: ordinal not in range(128)
+2016-03-16 15:05:38 [scrapy] ERROR: Error processing {'actor': [u'\u76ae\u5c14\u65af\xb7\u5e03\u9c81\u65af\u5357',
+           u'\u6b27\u5609\xb7\u67ef\u745e\u5170\u5bc7',
+           u'\u5362\u514b\xb7\u5e03\u96f7\u897f',
+           u'\u5361\u7279\u7433\u5a1c\xb7\u65af\u67ef\u677e',
+           u'\u5a01\u5c14\xb7\u5e15\u987f',
+           u'\u6bd4\u5c14\xb7\u65af\u7c73\u6258\u6d1b\u7ef4\u5947',
+           u'\u4f0a\u8389\u8428\xb7\u6cf0\u52d2-\u79d1\u7279\u5c14',
+           u'\u62c9\u624e\u5c14\xb7\u91cc\u65af\u6258\u592b\u65af\u57fa',
+           u'\u5e15\u7279\u91cc\u514b\xb7\u80af\u5c3c\u8fea'],
+ 'classification': [u'\u60ca\u609a'],
+ 'cover': u'https://movie.douban.com/subject/10792320/photos?type=R',
+ 'director': [u'\u7f57\u6770\xb7\u5510\u7eb3\u68ee'],
+ 'movieid': '10792320',
+ 'name': [u'\u8c0d\u5f71\u7279\u5de5 The November Man'],
+ 'score': [u'6.3'],
+ 'url': 'http://movie.douban.com/subject/10792320/',
+ 'year': [u'2014']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:05:46 [scrapy] ERROR: Error processing {'actor': [u'\u9093\u8d85',
+           u'\u7f57\u5fd7\u7965',
+           u'\u5f20\u96e8\u7eee',
+           u'\u6797\u5141',
+           u'\u5f90\u514b',
+           u'\u5434\u4ea6\u51e1',
+           u'\u674e\u5c1a\u6b63',
+           u'\u5362\u6b63\u96e8',
+           u'\u767d\u5ba2',
+           u'\u5b54\u8fde\u987a',
+           u'\u7530\u542f\u6587',
+           u'\u6587\u7ae0',
+           u'\u6768\u80fd',
+           u'\u5f20\u7f8e\u5a25',
+           u'\u674e\u53f6\u9752',
+           u'\u6797\u5b50\u806a'],
+ 'classification': [u'\u559c\u5267', u'\u7231\u60c5', u'\u5947\u5e7b'],
+ 'cover': u'https://movie.douban.com/subject/19944106/photos?type=R',
+ 'director': [u'\u5468\u661f\u9a70'],
+ 'movieid': '19944106',
+ 'name': [u'\u7f8e\u4eba\u9c7c'],
+ 'score': [u'7.3'],
+ 'url': 'http://movie.douban.com/subject/19944106/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-2: ordinal not in range(128)
+2016-03-16 15:05:47 [scrapy] ERROR: Error processing {'actor': [u'\u7504\u5b50\u4e39',
+           u'\u8fc8\u514b\xb7\u6cf0\u68ee',
+           u'\u5f20\u664b',
+           u'\u718a\u9edb\u6797',
+           u'\u8c2d\u8000\u6587',
+           u'\u5434\u5343\u8bed',
+           u'\u55bb\u4ea2',
+           u'\u90d1\u5219\u4ed5',
+           u'\u6881\u5bb6\u4ec1',
+           u'\u5f20\u7ee7\u806a',
+           u'\u9648\u56fd\u5764'],
+ 'classification': [u'\u5267\u60c5',
+                    u'\u52a8\u4f5c',
+                    u'\u4f20\u8bb0',
+                    u'\u5386\u53f2'],
+ 'cover': u'https://movie.douban.com/subject/11598977/photos?type=R',
+ 'director': [u'\u53f6\u4f1f\u4fe1'],
+ 'movieid': '11598977',
+ 'name': [u'\u53f6\u95ee3'],
+ 'score': [u'6.6'],
+ 'url': 'http://movie.douban.com/subject/11598977/',
+ 'year': [u'2015']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)
+2016-03-16 15:06:00 [scrapy] ERROR: Error processing {'actor': [u'\u5854\u4f26\xb7\u57c3\u683c\u987f',
+           u'\u4f11\xb7\u6770\u514b\u66fc',
+           u'\u514b\u91cc\u65af\u6258\u5f17\xb7\u6c83\u80af',
+           u'\u9a6c\u514b\xb7\u672c\u987f',
+           u'\u57fa\u601d\xb7\u827e\u4f26',
+           u'\u4e54\xb7\u54c8\u7279\u5229',
+           u'\u8482\u59c6\xb7\u9ea6\u514b\u7eb3\u5c3c',
+           u'\u57c3\u5fb7\u6e29\xb7\u5b89\u5fb7\u70c8',
+           u'\u5409\u59c6\xb7\u5e03\u52b3\u5fb7\u672c\u7279',
+           u'\u4f0a\u8d6b\u65af\xb7\u8d1d\u5c14\u672c',
+           u'\u4e39\u5c3c\u5c14\xb7\u82f1\u683c\u65af',
+           u'\u5b89\u59ae\u4e9a\xb7\u7d22\u6587\u65af\u91d1'],
+ 'classification': [u'\u5267\u60c5',
+                    u'\u559c\u5267',
+                    u'\u4f20\u8bb0',
+                    u'\u8fd0\u52a8'],
+ 'cover': u'https://movie.douban.com/subject/3072064/photos?type=R',
+ 'director': [u'\u5fb7\u514b\u65af\u7279\xb7\u5f17\u83b1\u5f7b'],
+ 'movieid': '3072064',
+ 'name': [u'\u98de\u9e70\u827e\u8fea Eddie the Eagle'],
+ 'score': [u'7.7'],
+ 'url': 'http://movie.douban.com/subject/3072064/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:06:04 [scrapy] ERROR: Error processing {'actor': [u'\u5c3c\u53e4\u62c9\xb7\u79d1\u65af\u7279-\u74e6\u5c14\u9053',
+           u'\u5e03\u4f26\u987f\xb7\u601d\u97e6\u8328',
+           u'\u6770\u62c9\u5fb7\xb7\u5df4\u7279\u52d2',
+           u'\u67e5\u5fb7\u7ef4\u514b\xb7\u535a\u65af\u66fc',
+           u'\u827e\u6d1b\u8482\xb7\u8881',
+           u'\u8003\u7279\u5c3c\xb7\u4f0a\u987f',
+           u'\u5362\u592b\u65af\xb7\u585e\u7ef4\u5c14',
+           u'\u6770\u5f17\u91cc\xb7\u62c9\u4ec0',
+           u'\u5e03\u83b1\u6069\xb7\u5e03\u6717',
+           u'\u745e\u5207\u5c14\xb7\u5e03\u83b1\u514b',
+           u'\u827e\u739b\xb7\u5e03\u65af',
+           u'\u6208\u5170\xb7D\xb7\u514b\u9c81\u7279',
+           u'\u963f\u6bd4\xb7\u4e3d',
+           u'\u5e03\u9c81\u65af\xb7\u65af\u5bbe\u65af',
+           u'\u7f57\u5bbe\xb7\u5948\u6587'],
+ 'classification': [u'\u52a8\u4f5c', u'\u5947\u5e7b', u'\u5192\u9669'],
+ 'cover': u'https://movie.douban.com/subject/26662345/photos?type=R',
+ 'director': [u'\u4e9a\u5386\u514b\u65af\xb7\u666e\u7f57\u4e9a\u65af'],
+ 'movieid': '26662345',
+ 'name': [u'\u795e\u6218\uff1a\u6743\u529b\u4e4b\u773c Gods of Egypt'],
+ 'score': [u'6.8'],
+ 'url': 'http://movie.douban.com/subject/26662345/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-6: ordinal not in range(128)
+2016-03-16 15:06:10 [scrapy] ERROR: Error processing {'actor': [u'\u8d75\u4e3d\u9896',
+           u'\u5f20\u7ff0',
+           u'\u7ae5\u83f2',
+           u'\u4e01\u4e00\u5b87',
+           u'\u6d82\u4e16\u65fb',
+           u'\u963f\u5170',
+           u'\u8bb8\u5cf0',
+           u'\u4f55\u6587\u8f89',
+           u'\u738b\u8bd1\u552f',
+           u'\u725f\u4e1b',
+           u'\u91d1\u58eb\u6770'],
+ 'classification': [u'\u559c\u5267', u'\u7231\u60c5'],
+ 'cover': u'https://movie.douban.com/subject/26345736/photos?type=R',
+ 'director': [u'\u90ed\u5927\u96f7'],
+ 'movieid': '26345736',
+ 'name': [u'\u5973\u6c49\u5b50\u771f\u7231\u516c\u5f0f'],
+ 'score': [],
+ 'url': 'http://movie.douban.com/subject/26345736/',
+ 'year': [u'2016']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-6: ordinal not in range(128)
+2016-03-16 15:06:13 [scrapy] ERROR: Error processing {'actor': [u'\u83b1\u6602\u7eb3\u591a\xb7\u8fea\u5361\u666e\u91cc\u5965',
+           u'\u6c64\u59c6\xb7\u54c8\u8fea',
+           u'\u5a01\u5c14\xb7\u4fdd\u5c14\u7279',
+           u'\u591a\u59c6\u7eb3\u5c14\xb7\u683c\u91cc\u68ee',
+           u'\u4fdd\u7f57\xb7\u5b89\u5fb7\u68ee',
+           u'\u5362\u5361\u65af\xb7\u54c8\u65af',
+           u'\u5e03\u83b1\u767b\xb7\u4f5b\u96f7\u5207',
+           u'\u5e03\u62c9\u5fb7\xb7\u5361\u7279',
+           u'\u514b\u91cc\u65af\u6258\u5f17\xb7\u743c\u52d2',
+           u'\u683c\u857e\u4e1d\xb7\u5fb7\u8299',
+           u'\u7f57\u4f2f\u7279\xb7\u83ab\u9686\u5c3c',
+           u'\u798f\u52d2\u65af\u7279\xb7\u53e4\u5fb7\u52d2\u514b',
+           u'\u675c\u5b89\xb7\u970d\u534e\u5fb7',
+           u'\u4e9a\u745f\xb7\u96f7\u5fb7\u514b\u52b3\u5fb7',
+           u'\u6885\u52b3\xb7\u7eb3\u514b\u970d\u514b',
+           u'\u65af\u79d1\u7279\xb7\u5965\u6797\u514b'],
+ 'classification': [u'\u5267\u60c5', u'\u60ca\u609a', u'\u5192\u9669'],
+ 'cover': u'https://movie.douban.com/subject/5327268/photos?type=R',
+ 'director': [u'\u4e9a\u5229\u6851\u5fb7\u7f57\xb7\u5188\u8428\u96f7\u65af\xb7\u4f0a\u7eb3\u91cc\u591a'],
+ 'movieid': '5327268',
+ 'name': [u'\u8352\u91ce\u730e\u4eba The Revenant'],
+ 'score': [u'8.0'],
+ 'url': 'http://movie.douban.com/subject/5327268/',
+ 'year': [u'2015']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+2016-03-16 15:06:15 [scrapy] INFO: Crawled 37 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2016-03-16 15:06:22 [scrapy] ERROR: Error processing {'actor': [u'\u738b\u826f',
+           u'\u79e6\u96ea',
+           u'\u6d2a\u8fb0',
+           u'\u674e\u84d3\u857e',
+           u'\u5f20\u56fd\u680b',
+           u'\u8c37\u9e4f'],
+ 'classification': [u'\u5267\u60c5',
+                    u'\u7231\u60c5',
+                    u'\u60ac\u7591',
+                    u'\u60ca\u609a'],
+ 'cover': u'https://movie.douban.com/subject/26461707/photos?type=R',
+ 'director': [u'\u738b\u826f'],
+ 'movieid': '26461707',
+ 'name': [u'\u6050\u6016\u7981\u5fcc\u4e4b\u7ea2\u65d7\u888d'],
+ 'score': [],
+ 'url': 'http://movie.douban.com/subject/26461707/',
+ 'year': [u'2015']}
+Traceback (most recent call last):
+  File "/Users/luyingqi/anaconda/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/luyingqi/Documents/bittiger/group_project_craw_recom/crawler/doubanMovieUpdate/doubanMovieUpdate/pipelines.py", line 42, in process_item
+    print ("Adding movie: ", name)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-7: ordinal not in range(128)
+2016-03-16 15:06:22 [scrapy] INFO: Closing spider (finished)
+2016-03-16 15:06:22 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 12823,
+ 'downloader/request_count': 38,
+ 'downloader/request_method_count/GET': 38,
+ 'downloader/response_bytes': 737072,
+ 'downloader/response_count': 38,
+ 'downloader/response_status_count/200': 38,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 3, 16, 21, 6, 22, 978393),
+ 'log_count/ERROR': 37,
+ 'log_count/INFO': 12,
+ 'request_depth_max': 1,
+ 'response_received_count': 38,
+ 'scheduler/dequeued': 38,
+ 'scheduler/dequeued/memory': 38,
+ 'scheduler/enqueued': 38,
+ 'scheduler/enqueued/memory': 38,
+ 'start_time': datetime.datetime(2016, 3, 16, 21, 2, 15, 416094)}
+2016-03-16 15:06:22 [scrapy] INFO: Spider closed (finished)
+updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  updating table: Movies
+Adding movie:  
