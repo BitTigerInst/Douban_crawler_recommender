@@ -11,12 +11,10 @@ import scrapy
 class DoubanmovieupdateItem(scrapy.Item):
     # define the fields for your item here like:
     name = scrapy.Field()
-    cover = scrapy.Field()
     year = scrapy.Field()
     score = scrapy.Field()
     director = scrapy.Field()
     classification = scrapy.Field()
     actor = scrapy.Field()
-    url = scrapy.Field()
     movieid = scrapy.Field()
-    pass
+    poster_url = scrapy.Field()
