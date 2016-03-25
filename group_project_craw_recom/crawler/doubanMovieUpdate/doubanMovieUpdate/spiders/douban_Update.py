@@ -1,10 +1,15 @@
-import scrapy
-import json
 import re
-from scrapy.selector import Selector
+from logging import getLogger
+
 from doubanMovieUpdate.items import DoubanmovieupdateItem
+
+from scrapy.selector import Selector
 from scrapy.spiders import CrawlSpider,Rule
 from scrapy.linkextractors import LinkExtractor
+import scrapy
+
+log = getLogger(__name__)
+
 
 class DoubanUpdate(CrawlSpider):
     name = "movieUpdate"
@@ -19,22 +24,31 @@ class DoubanUpdate(CrawlSpider):
         Rule(LinkExtractor(allow=(r'https://movie.douban.com/subject/\d+/\?from=playing_poster',)),callback="parse_item"),
     )
 
-    
     def parse_item(self, response):
-        sel=Selector(response)
-        item=DoubanmovieupdateItem()
-        item['name']=sel.xpath('//*[@id="content"]/h1/span[1]/text()').extract()
-        item['year']=sel.xpath('//*[@id="content"]/h1/span[2]/text()').re(r'\((\d+)\)')
-        item['score']=sel.xpath('//strong[@class="ll rating_num"]/text()').extract()
-        item['cover'] = sel.xpath('//div[@id="mainpic"]/a/@href').extract_first()
-        item_preurl = response.url
-        movieid = re.match(r'https://.*/.*/(.*)/.*', item_preurl).group(1)
-        item['url']=r'http://movie.douban.com/subject/'+movieid+r'/'
-        item['movieid'] =movieid
-        item['director']=sel.xpath('//span[@class="attrs"]/a[@rel="v:directedBy"]/text()').extract()
-        item['classification']= sel.xpath('//span[@property="v:genre"]/text()').extract()
-        #item['actor']= sel.xpath('//*[@id="info"]/span[3]/a[1]/text()').extract()
-        item['actor']= sel.xpath('//span[@class="attrs"]/a[@rel="v:starring"]/text()').extract()
-        
+        log.info("parsing {}".format(response.url))
+
+        selector = Selector(response)
+        item = DoubanmovieupdateItem()
+        item['name'] = selector.xpath('//*[@id="content"]/h1/span[1]/text()').extract()
+        item['year'] = selector.xpath('//*[@id="content"]/h1/span[2]/text()').re(r'\((\d+)\)')
+        item['score'] = selector.xpath('//strong[@class="ll rating_num"]/text()').extract()
+
+        movieid = re.match(r'https://.*/.*/(.*)/.*', response.url).group(1)
+        item['movieid'] = movieid
+        item['director'] = selector.xpath('//span[@class="attrs"]/a[@rel="v:directedBy"]/text()').extract()
+        item['classification'] = selector.xpath('//span[@property="v:genre"]/text()').extract()
+        item['actor'] = selector.xpath('//span[@class="attrs"]/a[@rel="v:starring"]/text()').extract()
+
+        # get the first recommended poster
+        list_poster_url = 'https://movie.douban.com/subject/{}/photos?type=R'.format(movieid)
+        yield scrapy.Request(list_poster_url, callback=self.parse_poster_url, meta={'item': item})
+
+    def parse_poster_url(self, response):
+        item = response.meta['item']
+        selector = Selector(response)
+
+        first_poster_thumb_url = selector.xpath('//*[@id="content"]/div/div[1]/ul/li[1]/div[1]/a/img/@src').extract_first()
+        item['poster_url'] = first_poster_thumb_url.replace('thumb', 'photo')
         yield item
+
 
